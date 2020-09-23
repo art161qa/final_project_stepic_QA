@@ -56,3 +56,7 @@ class BasePage():
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def guest_go_to_basket_from_main_page(self):
+        button_basket = self.browser.find_element(*BasePageLocators.BUTTON_BASKET)
+        button_basket.click()
